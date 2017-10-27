@@ -1,20 +1,30 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "Place.h"
 
 using namespace std;
 class Plane
 {
 protected:
-	char Places;
-	double airplane_number;
+	Place* places;
+	int number_of_places;
+	string airplane_number;
 public:
 	Plane();
-	void set_Places(char _Places_);
-	void set_airplane_number(double _airplane_number_);
-
-	char get_Places() const;
-	double get_airplane_number() const;
-	//void info() const;
+	Plane(int _number_of_places, string _airplane_number);
+	void set_number_of_places(int _number_of_places);
+	int get_number_of_places()const;
+	bool check_place(int number);
+	void set_airplane_number(string _airplane_number);
+	string get_airplane_number()const;
+	void set_place(string _name, string _surname, int _place);
+	void get_places() const;
+	void get_free_places() const;
+	void write_plane()const;
+	void read_plane(string _airlane_number);
+	void info() const;
 	~Plane();
+
+	friend istream& operator >> (istream& os, Plane& plane);
 };
