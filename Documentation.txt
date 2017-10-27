@@ -1,0 +1,9 @@
+create_passenger <name> <surname> - creates object of type passenger
+create_airport <name> <city> - creates object of type airport
+create_flight <place_of_departure>  <place_of_landing> <departure_time> <Arrival_time> <airplane_number> <number_of_places> - creates object of type flight
+create_plane <airplane_number> <number_of_places> - creates object of type plane
+info_plane <airplane_number> - shows information about plane with identical <airplane_number>
+info_flight <place of departure> - shows information about flight with identical <place of departure>
+new_order <name> <surname> <flight> <place> - <place> is taken in <flight> by person <name> <surname>
+delete_order <name> <surname> <flight> <place> - frees the places
+show_income - computes income in current session

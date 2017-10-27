@@ -59,3 +59,4 @@ istream& operator >> (istream& is, Passenger& passenger)
 	is >> passenger.name >> passenger.surname;
 	return is;
 }
+
