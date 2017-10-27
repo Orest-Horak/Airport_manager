@@ -10,11 +10,14 @@ protected:
 	string city;
 public:
 	Airport();
-	void set_name(string _name_);
-	void set_city(string _city_);
+	Airport(string _name, string _city);
+	void set_name(string _name);
+	void set_city(string _city);
 
 	string get_name() const;
 	string get_city() const;
+
 	//void info() const;
 	~Airport();
+	friend istream& operator >> (istream& os, Airport& airport);
 };
